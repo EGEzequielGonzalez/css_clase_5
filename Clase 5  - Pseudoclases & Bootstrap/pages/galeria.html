@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Código Café | Galeria</title>
+
+    <!-- Fuente -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+
+                <!-- Logo -->
+                <a class="navbar-brand" href="../index.html"><img src="../img/logo-header.webp"
+                        alt="Logo de la empresa"></a>
+
+                <!-- Botón hamburguesa -->
+                <button class="navbar-toggler hamburguesa" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    ☰
+                </button>
+
+                <!-- Menú -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link link-menu" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link-menu" href="#">Galería</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link-menu" href="./contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link-menu" href="./productos.html">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link-menu" href="./nosotros.html">Nosotros</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="title">Conocé nuestros espacios</h1>
+
+        <div class="movil">
+            <div id="carouselExample" class="carousel slide">
+                
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../img/interior_1_carrusel.png" class="d-block w-100" alt="Interior del bar">
+                    </div>
+                    <div class="carousel-item active">
+                        <img src="../img/interior2.webp" class="d-block w-100" alt="Patio al aire libre">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/interior_3_carrusel.png" class="d-block w-100" alt="Personas disfrutando café">
+                    </div>
+                </div>
+                
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="escritorio">
+            <section class="galeria">
+                <figure class="foto-cuadrada-1" tabindex="0">
+                    <img src="../img/interior1.webp" alt="Interior del bar">
+                    <figcaption>Viví nuestro salón</figcaption>
+                </figure>
+
+                <figure class="foto-vertical" tabindex="0">
+                    <img src="../img/interior2.webp" alt="Patio al aire libre">
+                    <figcaption>El mejor patio</figcaption>
+                </figure>
+
+                <figure class="foto-cuadrada-2" tabindex="0">
+                    <img src="../img/interior3.webp" alt="Personas disfrutando café">
+                    <figcaption>Momentos de café</figcaption>
+                </figure>
+
+                <figure class="foto-horizontal" tabindex="0">
+                    <img src="../img/interior4.webp" alt="Patio interno y externo del bar">
+                    <figcaption>Disfrutá nuestros ambientes</figcaption>
+                </figure>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>Todos los derechos reservados</p>
+        <ul>
+            <li><a href="https://www.instagram.com" target="_blank"><img src="../img/instagram.png"
+                        alt="Logo de Instagram"></a></li>
+            <li><a href="https://www.tiktok.com" target="_blank"><img src="../img/tiktok.png" alt="Logo de Tik Tok"></a>
+            </li>
+            <li><a href="https://www.x.com" target="_blank"><img src="../img/x.png" alt="Logo de X"></a></li>
+        </ul>
+    </footer>
+
+    <!-- Script de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
