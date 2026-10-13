@@ -1,0 +1,70 @@
+/* CSS General */
+* { padding: 0; margin: 0; box-sizing: border-box; }
+body { font-family: "Montserrat", sans-serif; font-weight: 400; background-color: rgb(227,234,240); min-height: 100vh; display: flex; flex-direction: column; }
+a { text-decoration: none; }
+img { max-width: 100%; border-radius: 5px; }
+.title { font-family: "Montserrat", sans-serif; font-weight: 900; font-size: 2rem; margin-top: 2rem; text-align: center; }
+.texto { color: rgb(165,42,42); font-family: "Montserrat", sans-serif; font-size: 18px; }
+/* Header y Footer */
+header, footer { background-image: url("../img/fondo-granos.png"); background-color: rgb(109,29,29); color: rgb(227,234,240); width: 100%; }
+header nav ul { list-style: none; display: flex; flex-direction: column; align-items: center; gap: 1rem; padding: 1rem; }
+.hamburguesa { color: rgb(227,234,240); border: 1px solid rgb(227,234,240); font-size: 2rem; }
+.link-menu, .navbar-nav .nav-link.link-menu { color: rgb(227,234,240); font-weight: 900; font-size: 1.8rem; padding: .3rem; border-radius: 5px; transition: all .5s; }
+.link-menu:visited { color: rgb(255,212,184); }
+.navbar-nav .nav-link.link-menu:hover, .navbar-nav .nav-link.link-menu:focus { background-color: rgba(253,33,33,.342); color: rgb(227,234,240); }
+.link-menu:active { text-decoration: underline; }
+main { color: rgb(109,29,29); display: flex; flex-direction: column; align-items: center; gap: 1rem; flex: 1; width: 100%; padding: 1rem; }
+.hero { background-color: rgb(109,29,29); color: rgb(227,234,240); display: flex; flex-direction: column; justify-content: space-around; align-items: center; padding: 1rem; gap: .8rem; width: 100%; border-radius: 5px; }
+.hero h2 { font-size: 1.8rem; }
+.hero .btn { padding: 1rem; }
+/* Tarjetas: Flexbox propio, sin row/col de Bootstrap */
+.contenedor-tarjetas { display: flex; flex-direction: column; gap: 1rem; width: 100%; }
+.tarjeta { background-color: rgb(255,212,184); display: flex; flex-direction: column; align-items: center; gap: .7rem; border-radius: 5px; overflow: hidden; height: 100%; }
+.tarjeta h2 { font-size: 1.7rem; padding: 1rem; }
+.tarjeta p { font-size: 1.3rem; padding: 1rem; }
+.tarjeta img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+footer { display: flex; flex-direction: column; align-items: flex-end; gap: 1rem; padding: 1rem; margin-top: 2rem; }
+footer p { margin: 0; text-align: right; }
+footer ul { list-style: none; display: flex; flex-direction: row; align-items: center; gap: 1rem; margin: 0; padding: 0; }
+/* Galería original con CSS Grid */
+.galeria { display: grid; grid-template-columns: 1fr; gap: 1rem; width: 100%; padding: 0 1rem; }
+.escritorio { display: none; }
+.movil { width: 100%; max-width: 720px; }
+.galeria figure { margin: 0; overflow: hidden; display: grid; grid-template-rows: 1fr auto; }
+.galeria img { width: 100%; height: 100%; min-height: 0; display: block; object-fit: cover; }
+.galeria figcaption { font-weight: 500; font-size: 18px; padding: .8rem; text-align: center; }
+/* Componentes de páginas secundarias */
+.contenido-pagina { width: min(100%, 900px); padding: 0 1rem; }
+.contenido-pagina section { margin-bottom: 1.5rem; }
+.contenido-pagina figure { margin: 1rem 0; }
+.contenido-pagina figure img { max-height: 400px; object-fit: cover; }
+.contenido-pagina ul { padding-left: 1.5rem; }
+.formulario-contacto { width: min(100%, 600px); }
+.formulario-contacto fieldset { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 1rem; }
+.formulario-contacto label { display: flex; flex-direction: column; gap: .25rem; }
+.formulario-contacto input, .formulario-contacto textarea { border: 1px solid #a3a3a3; border-radius: 5px; padding: .5rem; width: 100%; }
+.formulario-contacto textarea { min-height: 110px; }
+.mapa-contacto { width: min(100%, 850px); height: 320px; border: 0; }
+.accordion { width: 100%; }
+/* Los modales deben mostrarse por encima del contenido y mantener colores legibles */
+.modal-content, .accordion-item, .card { color: rgb(109,29,29); }
+@media (min-width: 1024px) {
+  header, footer { flex-direction: row; justify-content: space-between; }
+  header nav ul { flex-direction: row; padding: 2rem; }
+  header nav ul li a { font-size: 1.5rem; }
+  main { padding: 0; }
+  .title { font-size: 2.5rem; }
+  .hero { width: auto; }
+  .contenedor-tarjetas { flex-direction: row; width: 90%; max-width: 1200px; }
+  .tarjeta { flex: 1; min-width: 0; }
+  footer { flex-direction: row; justify-content: space-between; align-items: center; padding: .5rem 2rem; }
+  footer ul { flex-direction: row; gap: 1rem; padding: 0; }
+  .movil { display: none; }
+  .escritorio { display: flex; justify-content: center; width: 100%; }
+  .galeria { width: 50%; max-width: 1000px; grid-template-columns: 1fr 1fr; grid-template-rows: 280px 280px 280px; grid-template-areas: "vertical cuadrada-1" "vertical cuadrada-2" "horizontal horizontal"; }
+  .galeria figure:focus { box-shadow: 5px 5px 10px rgb(109,29,29); }
+  .foto-vertical { grid-area: vertical; }
+  .foto-cuadrada-1 { grid-area: cuadrada-1; }
+  .foto-cuadrada-2 { grid-area: cuadrada-2; }
+  .foto-horizontal { grid-area: horizontal; }
+}
